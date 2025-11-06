@@ -1,0 +1,15 @@
+SELECT * FROM users
+LEFT JOIN cedula
+ON users.id_user = cedula.id_user;
+
+SELECT users.name, cedula.cedula_number FROM users
+LEFT JOIN cedula
+ON users.id_user = cedula.id_user;
+
+SELECT users.name, cedula.cedula_number FROM cedula
+LEFT JOIN users
+ON users.id_user = cedula.id_user;
+
+SELECT users.name, languages.name FROM users
+LEFT JOIN users_languages ON users.id_user = users_languages.id_user
+JOIN languages ON users_languages.id_language = languages.id_language;
